@@ -9,6 +9,8 @@ const router = express.Router();
 
 import start from './controllers/start.js';
 router.get('/', start.createView);
+import dashboard from './controllers/dashboard.js';
+router.get('/dashboard', dashboard.createView);
 
 
 export default router;
