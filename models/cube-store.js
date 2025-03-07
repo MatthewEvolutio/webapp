@@ -3,7 +3,7 @@
 import logger from '../utils/logger.js';
 import JsonStore from './json-store.js';
 
-const appStore = {
+const cubeStore = {
 
   store: new JsonStore('./models/cube-store.json', { info: {} }),
   collection: 'info',
@@ -15,4 +15,4 @@ const appStore = {
 
 };
 
-export default appStore;
+export default cubeStore;
