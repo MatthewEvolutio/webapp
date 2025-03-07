@@ -11,7 +11,7 @@ import start from './controllers/start.js';
 router.get('/', start.createView);
 import dashboard from './controllers/dashboard.js';
 router.get('/dashboard', dashboard.createView);
-
+import event from './controllers/event.js';
 router.get('/event/:id', event.createView);
 
 export default router;

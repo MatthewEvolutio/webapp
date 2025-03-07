@@ -1,4 +1,4 @@
-{{#if singlePlaylist.songs}}
+{{#if event.events}}
 
   <table class="ui fixed striped table">
     <thead>
@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      {{#each singlePlaylist.songs}}
+      {{#each event.events}}
         <tr>
           <td>
             {{title}}
