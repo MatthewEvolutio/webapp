@@ -12,6 +12,10 @@ const cubeStore = {
   getAppInfo() {
     return this.store.findAll(this.collection);
   },
+  
+  getCategory(id) {
+    return this.store.findOneBy(this.collection, (category => category.id === id));
+},
 
 };
 
