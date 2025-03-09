@@ -13,8 +13,8 @@ const cubeStore = {
     return this.store.findAll(this.collection);
   },
   
-  getCategory(id) {
-    return this.store.findOneBy(this.collection, (category => category.id === id));
+  getEvent(id) {
+    return this.store.findOneBy(this.collection, (events => category.id === id));
 },
 
 };
