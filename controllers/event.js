@@ -13,7 +13,6 @@ const event = {
       wcaEvents: cubeStore.getAppInfo(),
       singleEvent: cubeStore.getEvent(eventId)
     };
-    
     response.render('event', viewData);   
   },
 };
