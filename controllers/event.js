@@ -3,7 +3,7 @@
 import logger from "../utils/logger.js";
 import cubeStore from "../models/cube-store.js";
 
-const event = {
+const eventList = {
   createView(request, response) {
     const eventId = request.params.id;
     logger.debug("Event id = " + eventId);
