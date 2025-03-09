@@ -6,12 +6,12 @@ import cubeStore from "../models/cube-store.js";
 const event = {
   createView(request, response) {
     const eventId = request.params.id;
-    logger.info("Start page loading!");
+    logger.debug("Event id = " + eventId);
     
     const viewData = {
       title: "CA1 Starter App",
       wcaEvents: cubeStore.getAppInfo(),
-      singleEvent: cubeStore.getCategory(eventId)
+      singleEvent: cubeStore.getEvent(eventId)
     };
     
     response.render('event', viewData);   
