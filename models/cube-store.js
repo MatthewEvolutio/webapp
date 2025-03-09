@@ -5,7 +5,7 @@ import JsonStore from './json-store.js';
 
 const cubeStore = {
 
-  store: new JsonStore('./models/cube-store.json', { wca_events: {} }),
+  store: new JsonStore('./models/cube-store.json', { wca_events: [] }),
   collection: 'wca_events',
   array: 'events',
 
