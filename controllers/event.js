@@ -11,7 +11,7 @@ const event = {
     const viewData = {
       title: "CA1 Starter App",
       wcaEvents: cubeStore.getAppInfo(),
-      event: cubeStore.getCategory(eventId)
+      singleEvent: cubeStore.getCategory(eventId)
     };
     
     response.render('event', viewData);   
