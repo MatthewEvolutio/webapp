@@ -6,7 +6,6 @@ import cubeStore from "../models/cube-store.js";
 const event = {
   createView(request, response) {
     const eventId = request.params.id;
-    logger.debug("Event id = " + eventId);
     
     const viewData = {
       title: "CA1 Starter App",

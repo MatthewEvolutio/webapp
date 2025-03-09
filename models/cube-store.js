@@ -9,6 +9,7 @@ const cubeStore = {
   collection: 'wca_events',
   array: 'events',
 
+
   getAppInfo() {
     return this.store.findAll(this.collection);
   },
