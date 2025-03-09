@@ -15,6 +15,8 @@ const cubeStore = {
   
   getEvent(id) {
     return this.store.findOneBy(this.collection, (event => event.id === id));
+    logger.debug("Retrieved event: ", event);  // Check if it's the correct event
+    return event;
 },
 
 };
