@@ -9,12 +9,12 @@ const cubeStore = {
   collection: 'wca_events',
   array: 'events',
 
-  getEventInfo() {
+  getAppInfo() {
     return this.store.findAll(this.collection);
   },
   
   getEvent(id) {
-    return this.store.findOneBy(this.collection, (events => events.id === id));
+    return this.store.findOneBy(this.collection, (event => event.id === id));
 },
 
 };
