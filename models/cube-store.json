@@ -3,6 +3,7 @@
     {
       "category_id": "00",
       "category": "nxns",
+      "category_icon": "cubing-icon event-333",
       "events": [
         {
           "event_id": "00",
@@ -45,6 +46,7 @@
     {
       "category_id": "01",
       "category": "blindfolded",
+      "category_icon": "cubing-icon event-333bf",
       "events": [
         {
           "event_id": "06",
@@ -75,6 +77,7 @@
     {
       "category_id": "02",
       "category": "other_3x3_events",
+      "category_icon": "cubing-icon event-333oh",
       "events": [
         {
           "event_id": "10",
@@ -93,6 +96,7 @@
     {
       "category_id": "03",
       "category": "side_events",
+      "category_icon": "cubing-icon event-pyram",
       "events": [
         {
           "event_id": "12",
