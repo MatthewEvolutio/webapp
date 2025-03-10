@@ -2,7 +2,7 @@
   "wca_events": [
     {
       "category_id": "00",
-      "category": "nxns",
+      "category": "NxNs",
       "category_icon": "cubing-icon event-333",
       "events": [
         {
@@ -45,7 +45,7 @@
     },
     {
       "category_id": "01",
-      "category": "blindfolded",
+      "category": "Blindfolded",
       "category_icon": "cubing-icon event-333bf",
       "events": [
         {
@@ -76,7 +76,7 @@
     },
     {
       "category_id": "02",
-      "category": "other_3x3_events",
+      "category": "Other 3x3 Events",
       "category_icon": "cubing-icon event-333oh",
       "events": [
         {
@@ -95,7 +95,7 @@
     },
     {
       "category_id": "03",
-      "category": "side_events",
+      "category": "Side Events",
       "category_icon": "cubing-icon event-pyram",
       "events": [
         {
