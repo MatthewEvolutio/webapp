@@ -105,7 +105,7 @@
           "cutoff": "1 hour total",
           "avg_type": "Mean of 3",
           "event_icon": "cubing-icon event-333fm",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/epnEalnBCm0?si=juvHY2XhADMI1lCQ"
         },
         {
           "event_id": "11",
@@ -113,7 +113,7 @@
           "cutoff": "2 mins",
           "avg_type": "Average of 5",
           "event_icon": "cubing-icon event-333oh",
-          "wr_vid": "https://www.youtube.com/embed/epnEalnBCm0?si=juvHY2XhADMI1lCQ"
+          "wr_vid": "https://www.youtube.com/embed/88_TpF7WKVo?si=UoZ1IWKhFVRYqk5p"
         }
       ]
     },
@@ -128,7 +128,7 @@
           "cutoff": "4 mins",
           "avg_type": "Average of 5",
           "event_icon": "cubing-icon event-minx",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/BspXtcUcQeo?si=w0BLobyPjJPcLjzwhttps://www.youtube.com/embed/lO262UFJGew?si=rYYleF4-ZfpCPUgx"
         },
         {
           "event_id": "13",
@@ -136,7 +136,7 @@
           "cutoff": "5 mins",
           "avg_type": "Average of 5",
           "event_icon": "cubing-icon event-pyram",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/lO262UFJGew?si=rYYleF4-ZfpCPUgx"
         },
         {
           "event_id": "14",
@@ -144,7 +144,7 @@
           "cutoff": "5 mins",
           "avg_type": "Average of 5",
           "event_icon": "cubing-icon event-skewb",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/EFl0dfAZlrA?si=Ed2SWaGR2eK9qCqR"
         },
         {
           "event_id": "15",
@@ -152,7 +152,7 @@
           "cutoff": "1 min 30 seconds",
           "avg_type": "Average of 5",
           "event_icon": "cubing-icon event-sq1",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/4uH1-Wad35A?si=Z7YLxydRSx6CnhEf"
         },
         {
           "event_id": "16",
@@ -160,7 +160,7 @@
           "cutoff": "2 mins",
           "avg_type": "Average of 5",
           "event_icon": "cubing-icon event-clock",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/91b9RpUeZ20?si=8jbXP-xkObiAwyqJ"
         }
       ]
     }
