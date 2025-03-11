@@ -9,37 +9,49 @@
           "event_id": "00",
           "name": "2x2x2",
           "cutoff": "5 mins",
-          "avg_type": "Average of 5"
+          "avg_type": "Average of 5",
+          "event_icon": "",
+          "wr_vid": ""
         },
         {
           "event_id": "01",
           "name": "3x3x3",
           "cutoff": "10 mins",
-          "avg_type": "Average of 5"
+          "avg_type": "Average of 5",
+          "event_icon": "",
+          "wr_vid": ""
         },
         {
           "event_id": "02",
           "name": "4x4x4",
           "cutoff": "4 mins",
-          "avg_type": "Average of 5"
+          "avg_type": "Average of 5",
+          "event_icon": "",
+          "wr_vid": ""
         },
         {
           "event_id": "03",
           "name": "5x5x5",
           "cutoff": "4 mins",
-          "avg_type": "Average of 5"
+          "avg_type": "Average of 5",
+          "event_icon": "",
+          "wr_vid": ""
         },
         {
           "event_id": "04",
           "name": "6x6x6",
           "cutoff": "10 mins",
-          "avg_type": "Mean of 3"
+          "avg_type": "Mean of 3",
+          "event_icon": "",
+          "wr_vid": ""
         },
         {
           "event_id": "05",
           "name": "7x7x7",
           "cutoff": "10 mins",
-          "avg_type": "Mean of 3"
+          "avg_type": "Mean of 3",
+          "event_icon": "",
+          "wr_vid": ""
         }
       ]
     },
@@ -52,83 +64,11 @@
           "event_id": "06",
           "name": "3x3x3 Blindfolded",
           "cutoff": "10 mins (Cumulative)",
-          "avg_type": "Mean of 3"
+          "avg_type": "Mean of 3",
+          "event_icon": "",
+          "wr_vid": ""
         },
         {
           "event_id": "07",
           "name": "3x3x3 Multi-Blind",
-          "cutoff": "10 mins per cube (Up to 60 mins)",
-          "avg_type": "Best of 1"
-        },
-        {
-          "event_id": "08",
-          "name": "4x4x4 Blindfolded",
-          "cutoff": "1 hour total",
-          "avg_type": "Mean of 3"
-        },
-        {
-          "event_id": "09",
-          "name": "5x5x5 Blindfolded",
-          "cutoff": "1 hour total",
-          "avg_type": "Mean of 3"
-        }
-      ]
-    },
-    {
-      "category_id": "02",
-      "category": "Other 3x3 Events",
-      "category_icon": "cubing-icon event-333oh",
-      "events": [
-        {
-          "event_id": "10",
-          "name": "3x3x3 Fewest Moves",
-          "cutoff": "1 hour total",
-          "avg_type": "Mean of 3"
-        },
-        {
-          "event_id": "11",
-          "name": "3x3x3 One-Handed",
-          "cutoff": "2 mins",
-          "avg_type": "Average of 5"
-        }
-      ]
-    },
-    {
-      "category_id": "03",
-      "category": "Side Events",
-      "category_icon": "cubing-icon event-pyram",
-      "events": [
-        {
-          "event_id": "12",
-          "name": "Megaminx",
-          "cutoff": "4 mins",
-          "avg_type": "Average of 5"
-        },
-        {
-          "event_id": "13",
-          "name": "Pyraminx",
-          "cutoff": "5 mins",
-          "avg_type": "Average of 5"
-        },
-        {
-          "event_id": "14",
-          "name": "Skewb",
-          "cutoff": "5 mins",
-          "avg_type": "Average of 5"
-        },
-        {
-          "event_id": "15",
-          "name": "Square-1",
-          "cutoff": "1 min 30 seconds",
-          "avg_type": "Average of 5"
-        },
-        {
-          "event_id": "16",
-          "name": "Clock",
-          "cutoff": "2 mins",
-          "avg_type": "Average of 5"
-        }
-      ]
-    }
-  ]
-}
+          "cutoff": "10 mins per cub
