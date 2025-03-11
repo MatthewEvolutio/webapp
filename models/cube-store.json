@@ -51,7 +51,7 @@
           "cutoff": "10 mins",
           "avg_type": "Mean of 3",
           "event_icon": "cubing-icon event-777",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/u482x-exlhI?si=hcJ5LOj8gmkKeerH"
         }
       ]
     },
@@ -66,7 +66,7 @@
           "cutoff": "10 mins (Cumulative)",
           "avg_type": "Mean of 3",
           "event_icon": "cubing-icon event-333bf",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/TPylQiSbW98"
         },
         {
           "event_id": "07",
@@ -74,7 +74,7 @@
           "cutoff": "10 mins per cube (Up to 60 mins)",
           "avg_type": "Best of 1",
           "event_icon": "cubing-icon event-333mbf",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/GoGVYQqgTgA?si=J1-z6ynb_7Fh8pHR"
         },
         {
           "event_id": "08",
@@ -82,7 +82,7 @@
           "cutoff": "1 hour total",
           "avg_type": "Mean of 3",
           "event_icon": "cubing-icon event-444bf",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/Us0x_zcNSfU?si=e6NH56-a4jLVP7AY"
         },
         {
           "event_id": "09",
@@ -90,7 +90,7 @@
           "cutoff": "1 hour total",
           "avg_type": "Mean of 3",
           "event_icon": "cubing-icon event-555bf",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/uhkHR-6vawQ?si=GY4zmFg4Kwe3cthK"
         }
       ]
     },
@@ -113,7 +113,7 @@
           "cutoff": "2 mins",
           "avg_type": "Average of 5",
           "event_icon": "cubing-icon event-333oh",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/epnEalnBCm0?si=juvHY2XhADMI1lCQ"
         }
       ]
     },

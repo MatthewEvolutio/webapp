@@ -1,7 +1,5 @@
 {{#if singleEvent.events}}
 
-{{> menu}}
-
 <link rel="stylesheet" href="https://cdn.cubing.net/v0/css/@cubing/icons/css">
 <table class="ui fixed striped table">
     <thead>
@@ -19,7 +17,7 @@
           <td>{{cutoff}}</td>
           <td>{{avg_type}}</td>
           
-          <td><iframe class="vid" src="{{wr_vid}}"></iframe></td>
+          <td><iframe class="vid" src="{{wr_vid}}" allowfullscreen></iframe></td>
         </tr>
       {{/each}}
     </tbody>
