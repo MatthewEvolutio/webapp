@@ -19,7 +19,7 @@
           "cutoff": "10 mins",
           "avg_type": "Average of 5",
           "event_icon": "cubing-icon event-333",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/3BKV7mYhgpI?si=SDIrGtR0BKqTXFpi"
         },
         {
           "event_id": "02",
@@ -27,7 +27,7 @@
           "cutoff": "4 mins",
           "avg_type": "Average of 5",
           "event_icon": "cubing-icon event-444",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/yApZR-TQ6ZQ?si=foQhUrtQONzRnLLK"
         },
         {
           "event_id": "03",
@@ -35,7 +35,7 @@
           "cutoff": "4 mins",
           "avg_type": "Average of 5",
           "event_icon": "cubing-icon event-555",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/9cA2A8OJUFY?si=9JGRUoLPX0K_eM99"
         },
         {
           "event_id": "04",
@@ -43,7 +43,7 @@
           "cutoff": "10 mins",
           "avg_type": "Mean of 3",
           "event_icon": "cubing-icon event-666",
-          "wr_vid": ""
+          "wr_vid": "https://www.youtube.com/embed/s_ulA4GGyU0?si=2Lv0j0X0t5Ga-TLq"
         },
         {
           "event_id": "05",
