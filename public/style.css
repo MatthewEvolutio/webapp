@@ -21,3 +21,12 @@ body {
   display: block;
   margin: 0 auto;
 }
+
+.map {
+  width: 100%;
+  max-width: 560px; 
+  max-height: 560px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
