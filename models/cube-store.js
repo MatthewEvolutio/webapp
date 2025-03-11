@@ -15,7 +15,7 @@ const cubeStore = {
   },
   
   getEvent(id) {
-    return this.store.findOneBy(this.collection, (event) => event.id === id);
+    return this.store.findOneBy(this.collection, (event) => event.category_id === id);
   },
 
 };
