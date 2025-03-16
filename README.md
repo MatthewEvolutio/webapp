@@ -1,10 +1,4 @@
 # Assignment 1 Starter Project
 
-Use this starter project as the basis for Assignment One
-
-You should: 
-
-- Remix this project
-- Rename the project **wad1-ca1-your-name**
-- Replace your name with your name :) 
-
+This Web App is designed to allow the user to explore WCA events and see the world records for each event.
+All info is up to date as of 16/03/2025 

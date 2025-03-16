@@ -10,7 +10,11 @@ html {
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
-  background-color: lightgrey;
+  background-image: url("https://cdn.glitch.global/90472888-ac71-474c-b5b3-a72fb3267e17/cube%20gif.gif?v=1742167399132");
+}
+
+section {
+  background-color: red;
 }
 
 .vid {
