@@ -12,11 +12,9 @@ body {
   margin: 2em;
   background-image: url("https://cdn.glitch.global/90472888-ac71-474c-b5b3-a72fb3267e17/cube%20gif.gif?v=1742167399132");
 }
-
-section {
-  background-color: red;
+ .ui.segment{
+   background-color: rgba(255, 255, 255, 0.7);
 }
-
 .vid {
   width: 100%;
   max-width: 560px; 
