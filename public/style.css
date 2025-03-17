@@ -1,6 +1,6 @@
 @font-face {
   font-family: EightBitDragon;
-  src: url("https://cdn.glitch.global/90472888-ac71-474c-b5b3-a72fb3267e17/eight-bit-dragon.otf?v=1742168709571);
+  src: url("https://cdn.glitch.global/90472888-ac71-474c-b5b3-a72fb3267e17/eight-bit-dragon.otf?v=1742168709571");
 }
 
 html {
@@ -34,6 +34,10 @@ body {
   height: 100%;
 }
 
-h1 {
-  font-family: EightBitDragon;
+h1, h2, h3 {
+ font-family: EightBitDragon;
+}
+
+#logo {
+ font-family: EightBitDragon;  
 }
