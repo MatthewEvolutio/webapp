@@ -1,33 +1,18 @@
-<section class="ui left aligned middle aligned segment">
-  
-  <h2>Playlist App Dashboard</h2>
-  
-  {{#unless events}}
-    <h3 class="ui message">
-      Start adding your playlists!
-    </h3>
-  {{/unless}}
+<link rel="stylesheet" href="https://cdn.cubing.net/v0/css/@cubing/icons/css">
 
-  {{#each events}}
-    <section class="ui left aligned middle aligned segment">
+<section class="ui center aligned middle aligned segment">
+  
+  <h2>WCA Event Categories</h2>
 
-      <h3 class="ui header">
-        {{title}}
-      </h3>
-      
+    {{#each wcaEvents}}
+    <section class="ui middle aligned segment">
+      <h3 class="ui header">{{category}}</h3>
+      <a href="/event/{{category_id}}">
+        <span class="{{category_icon}}"></span>
+      </a>
       {{#if events}}
-        <p>
-          Total songs: {{events.length}}
-        </p>
-      
-      {{else}}
-        <p>
-          Empty playlist!
-        </p>
+        <p class="ui middle aligned segment">Total events: {{events.length}}</p>
       {{/if}}
-      
-      <a href="/event/{{id}}"><i class = "ui open folder outline black icon"></i></a>
-    </section>
+  </section>
   {{/each}}
-
 </section>
