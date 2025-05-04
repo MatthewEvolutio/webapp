@@ -1,0 +1,33 @@
+<section class="ui left aligned middle aligned segment">
+  
+  <h2>Playlist App Dashboard</h2>
+  
+  {{#unless events}}
+    <h3 class="ui message">
+      Start adding your playlists!
+    </h3>
+  {{/unless}}
+
+  {{#each events}}
+    <section class="ui left aligned middle aligned segment">
+
+      <h3 class="ui header">
+        {{title}}
+      </h3>
+      
+      {{#if events}}
+        <p>
+          Total songs: {{events.length}}
+        </p>
+      
+      {{else}}
+        <p>
+          Empty playlist!
+        </p>
+      {{/if}}
+      
+      <a href="/event/{{id}}"><i class = "ui open folder outline black icon"></i></a>
+    </section>
+  {{/each}}
+
+</section>

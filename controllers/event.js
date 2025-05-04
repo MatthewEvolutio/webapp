@@ -16,7 +16,7 @@ const event = {
     response.render('event', viewData);   
   },
   
-    addevent(request, response) {
+    addEvent(request, response) {
       const categoryId = request.params.id;
       const category = cubeStore.getEventCategory(categoryId);
       const newevent = {
@@ -24,8 +24,8 @@ const event = {
         title: request.body.title,
         artist: request.body.artist,
       };
-      cubeStore.addevent(categoryId, newevent);
-      response.redirect('/playlist/' + categoryId);
+      cubeStore.addEvent(categoryId, newevent);
+      response.redirect('/event/' + categoryId);
   },
 
 };

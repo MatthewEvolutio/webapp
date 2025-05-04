@@ -27,6 +27,11 @@ const cubeStore = {
       (playlist => playlist.category.toLowerCase() === category.toLowerCase())
    );
 },
+  
+  addCube(id, cube) {
+    this.store.addItem(this.collection, id, this.array, cube);
+},
+
 
 
 };
