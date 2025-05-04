@@ -10,7 +10,7 @@ const app = express();
 const port = 3000;
 
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ extended: false, }));
+app.use(bodyParser.urlencoded({ extended: true, }));
 
 const handlebars = create({extname: '.hbs'});
 app.engine(".hbs", handlebars.engine);
