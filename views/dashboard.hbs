@@ -1,19 +1,4 @@
-{{> menu}}
-<link rel="stylesheet" href="https://cdn.cubing.net/v0/css/@cubing/icons/css">
+{{> menu id="dashboard"}}
 
-<section class="ui center aligned middle aligned segment">
-  
-  <h2>WCA Event Categories</h2>
-
-    {{#each wcaEvents}}
-    <section class="ui middle aligned segment">
-      <h3 class="ui header">{{category}}</h3>
-      <a href="/event/{{category_id}}">
-        <span class="{{category_icon}}"></span>
-      </a>
-      {{#if events}}
-        <p class="ui middle aligned segment">Total events: {{events.length}}</p>
-      {{/if}}
-  </section>
-  {{/each}}
-</section>
+{{> listevents}}
+{{> addevent}}

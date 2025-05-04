@@ -17,15 +17,8 @@ const event = {
   },
   
 addEvent(request, response) {
-  console.log("POST request received to add event");
   const categoryId = request.params.id;
   const category = cubeStore.getEventCategory(categoryId);
-  
-  if (!category) {
-    logger.error(`Category with ID ${categoryId} not found`);
-    return response.status(404).send("Category not found");
-  }
-
   const newEvent = {
     event_id: uuidv4(),
     name: request.body.name,
