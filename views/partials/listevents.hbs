@@ -1,6 +1,5 @@
   {{#if events}}
     <link rel="stylesheet" href="https://cdn.cubing.net/v0/css/@cubing/icons/css">
-    <link rel="stylesheet" href="">
 
     <table class="ui fixed striped table">
       <thead>
@@ -13,7 +12,7 @@
       </thead>
       <tbody>
         {{#each events}}
-          {{> listOneEvent categorytId=../id}}
+          {{> listOneEvent categoryId=../id}}
           {{> editEvent categoryId=../id}}  
         {{/each}}
       </tbody>
