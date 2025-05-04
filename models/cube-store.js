@@ -36,9 +36,11 @@ const cubeStore = {
     this.store.addCollection(this.collection, category);
 },
 
-  removeEvent(id, eventId) {
-    this.store.removeItem(this.collection, id, this.array, eventId);
-},
+removeEvent(id, eventId) {
+  console.log(`REMOVE EVENT: category_id=${id}, event_id=${eventId}`);
+  this.store.removeItem(this.collection, id, this.array, eventId);
+}
+
 
 
 
