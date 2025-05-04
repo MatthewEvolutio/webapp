@@ -22,11 +22,12 @@ const cubeStore = {
     return this.store.findOneBy(this.collection, (event) => event.category_id === id);
   },
   
-  getEventCategory(category) {
-   return this.store.findBy(this.collection,
-      (event => event.category.toLowerCase() === category.toLowerCase())
-   );
-},
+  getEventCategory(id) {
+    return this.store.findOneBy(this.collection,
+      (event) => event.category_id === id
+    );
+  },
+
   
   addEvent(id, event) {
     this.store.addItem(this.collection, id, this.array, event);
@@ -42,16 +43,9 @@ removeEvent(id, eventId) {
 },
 
 removeCategory(id) {
-  const category = this.getEventCategory(id)[0];
-  if (category) {
-    this.store.removeCollection(this.collection, category);
-  } else {
-    console.warn(`Category with id ${id} not found`);
-  }
+  const category = this.getEventCategory(id);
+  this.store.removeCollection(this.collection, category);
 }
-
-
-
 
 };
 
