@@ -1,60 +1,6 @@
 {
   "wca_events": [
     {
-      "category_id": "00",
-      "category": "NxNs",
-      "category_icon": "cubing-icon event-333",
-      "rating": 5,
-      "events": [
-        {
-          "event_id": "00",
-          "cutoff": "5 mins hi",
-          "avg_type": "Average of 5",
-          "wr_vid": "https://www.youtube.com/embed/iIFsuCq31PQ?si=OvWkVV940HKqm-Qr"
-        },
-        {
-          "event_id": "01",
-          "name": "3x3x3",
-          "cutoff": "10 mins",
-          "avg_type": "Average of 5",
-          "event_icon": "cubing-icon event-333",
-          "wr_vid": "https://www.youtube.com/embed/3BKV7mYhgpI?si=SDIrGtR0BKqTXFpi"
-        },
-        {
-          "event_id": "02",
-          "name": "4x4x4",
-          "cutoff": "4 mins",
-          "avg_type": "Average of 5",
-          "event_icon": "cubing-icon event-444",
-          "wr_vid": "https://www.youtube.com/embed/yApZR-TQ6ZQ?si=foQhUrtQONzRnLLK"
-        },
-        {
-          "event_id": "03",
-          "name": "5x5x5",
-          "cutoff": "4 mins",
-          "avg_type": "Average of 5",
-          "event_icon": "cubing-icon event-555",
-          "wr_vid": "https://www.youtube.com/embed/9cA2A8OJUFY?si=9JGRUoLPX0K_eM99"
-        },
-        {
-          "event_id": "04",
-          "name": "6x6x6",
-          "cutoff": "10 mins",
-          "avg_type": "Mean of 3",
-          "event_icon": "cubing-icon event-666",
-          "wr_vid": "https://www.youtube.com/embed/s_ulA4GGyU0?si=2Lv0j0X0t5Ga-TLq"
-        },
-        {
-          "event_id": "05",
-          "name": "7x7x7",
-          "cutoff": "10 mins",
-          "avg_type": "Mean of 3",
-          "event_icon": "cubing-icon event-777",
-          "wr_vid": "https://www.youtube.com/embed/u482x-exlhI?si=hcJ5LOj8gmkKeerH"
-        }
-      ]
-    },
-    {
       "category_id": "01",
       "category": "Blindfolded",
       "category_icon": "cubing-icon event-333bf",
@@ -91,6 +37,14 @@
           "wr_vid": "https://www.youtube.com/embed/kOCyhH_haBQ?si=wA8zcGGqDTsJJTB7"
         }
       ]
+    },
+    {
+      "category_id": "3751e727-cf51-495b-a47a-184836bb5bf5",
+      "category": "rrrrr",
+      "category_icon": "cubing-icon unofficial-333mts",
+      "events": [],
+      "rating": "1",
+      "date": "2025-05-04T21:37:23.748Z"
     }
   ]
 }
