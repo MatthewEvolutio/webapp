@@ -8,10 +8,8 @@
       "events": [
         {
           "event_id": "00",
-          "name": "2x2x2",
-          "cutoff": "5 mins",
+          "cutoff": "5 mins hi",
           "avg_type": "Average of 5",
-          "event_icon": "cubing-icon event-222",
           "wr_vid": "https://www.youtube.com/embed/iIFsuCq31PQ?si=OvWkVV940HKqm-Qr"
         },
         {
