@@ -5,7 +5,7 @@ import cubeStore from "../models/cube-store.js";
 
 const getCategories = () => {
   const categories = [];
-  const cubes = cubeStore.getAllPlaylists();
+  const cubes = cubeStore.getAllEvents();
   cubes.forEach(element => {
     if (!categories.includes(element.category)) {
       categories.push(element.category);
@@ -27,6 +27,23 @@ const search = {
     
     response.render('search', viewData);
   },
+  
+  findResult(request, response) {
+    const category = request.body.category;
+    logger.debug('Event category = ' + category);
+
+    const viewData = {
+      title: 'Event',
+      foundEvents: cubeStore.getEventCategory(category),
+      categories: getCategories(),
+      categoryTitle: category
+    };
+    
+    logger.debug(viewData.foundEvents);
+    
+    response.render('search', viewData);
+},
+
   
 };
 

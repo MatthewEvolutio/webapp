@@ -15,6 +15,7 @@ router.get('/about', about.createView);
 import event from './controllers/event.js';
 router.get('/event/:id', event.createView);
 router.get('/search', search.createView);
+router.post('/searchCategory', search.findResult);
 
 
 export default router;

@@ -14,9 +14,20 @@ const cubeStore = {
     return this.store.findAll(this.collection);
   },
   
+  getAllEvents() {
+    return this.store.findAll(this.collection);
+  },
+  
   getEvent(id) {
     return this.store.findOneBy(this.collection, (event) => event.category_id === id);
   },
+  
+  getEventCategory(category) {
+   return this.store.findBy(this.collection,
+      (playlist => playlist.category.toLowerCase() === category.toLowerCase())
+   );
+},
+
 
 };
 

@@ -1,8 +1,13 @@
 {{> menu}}
+{{#with singleEvent}}
 
 <section class="ui center aligned middle aligned segment">
   <h2 class="ui header">
-  {{singleEvent.title}}
+    {{title}}
   </h2>
   {{> listevents}}
+  
+  <section class="ui center aligned middle aligned segment">
+    {{> addsong}}
+  </section>
 </section>
