@@ -42,9 +42,14 @@ removeEvent(id, eventId) {
 },
 
 removeCategory(id) {
-    const category = this.getEventCategory(id);
+  const category = this.getEventCategory(id)[0];
+  if (category) {
     this.store.removeCollection(this.collection, category);
-},
+  } else {
+    console.warn(`Category with id ${id} not found`);
+  }
+}
+
 
 
 

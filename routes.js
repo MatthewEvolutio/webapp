@@ -19,6 +19,6 @@ router.post('/searchCategory', search.findResult);
 router.post('/event/:id/addevent', event.addEvent);
 router.post('/dashboard/addcategory', dashboard.addCategory);
 router.get("/event/:id/deleteevent/:eventid", event.deleteEvent);
-router.get('/dashboard/deleteplaylist/:id', dashboard.deletePlaylist);
+router.get('/dashboard/deletecategory/:id', dashboard.deleteCategory);
 
 export default router;
