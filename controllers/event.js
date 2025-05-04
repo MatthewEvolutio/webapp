@@ -29,7 +29,16 @@ const event = {
 
     cubeStore.addEvent(categoryId, newEvent);
     response.redirect(`/event/${categoryId}`);
-  }
+  },
+  
+  deleteEvent(request, response) {
+    const categoryId = request.params.id;
+    const eventId = request.params.eventid;
+    logger.debug(`Deleting Event  ${eventId} from Category ${categoryId}`);
+    cubeStore.removeEvent(categoryId, eventId);
+    response.redirect(`/event/${categoryId}`);
+},
+
 
 
 };

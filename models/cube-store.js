@@ -36,6 +36,10 @@ const cubeStore = {
     this.store.addCollection(this.collection, category);
 },
 
+  removeEvent(id, eventId) {
+    this.store.removeItem(this.collection, id, this.array, eventId);
+},
+
 
 
 };

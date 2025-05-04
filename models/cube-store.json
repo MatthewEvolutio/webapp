@@ -165,6 +165,14 @@
           "avg_type": "Average of 5",
           "event_icon": "cubing-icon event-clock",
           "wr_vid": "https://www.youtube.com/embed/91b9RpUeZ20?si=8jbXP-xkObiAwyqJ"
+        },
+        {
+          "event_id": "17",
+          "name": "fjsdjfsdhjkfsd",
+          "cutoff": "2 mins",
+          "avg_type": "Average of 5",
+          "event_icon": "cubing-icon event-clock",
+          "wr_vid": "https://www.youtube.com/embed/91b9RpUeZ20?si=8jbXP-xkObiAwyqJ"
         }
       ]
     },
