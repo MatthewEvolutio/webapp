@@ -2,6 +2,7 @@
 
 import logger from "../utils/logger.js";
 import cubeStore from "../models/cube-store.js";
+import accounts from './accounts.js';
 
 const getCategories = () => {
   const categories = [];

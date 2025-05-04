@@ -3,6 +3,7 @@
 import logger from "../utils/logger.js";
 import cubeStore from "../models/cube-store.js";
 import { v4 as uuidv4 } from 'uuid';
+import accounts from './accounts.js';
 
 const event = {
   createView(request, response) {
