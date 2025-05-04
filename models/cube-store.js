@@ -29,7 +29,7 @@ const cubeStore = {
   },
 
   getAllCategories() {
-    return this.store.findAll(this.array);
+    return this.store.findAll(this.collection);
   },
   
   addEvent(id, event) {
@@ -60,6 +60,9 @@ editEvent(categoryId, eventId, updatedEvent) {
   }
 },
 
+getUserPlaylists(userid) {
+  return this.store.findBy(this.collection, (playlist => playlist.userid === userid));
+},
 
 
 
