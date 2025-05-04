@@ -46,9 +46,18 @@ removeCategory(id) {
   this.store.removeCollection(this.collection, category);
 },
   
-  editEvent(id, eventId, updatedEvent) {
-    this.store.editItem(this.collection, id, eventId, this.array, updatedEvent);
+editEvent(categoryId, eventId, updatedEvent) {
+  const category = this.getEvent(categoryId);
+  if (category) {
+    const index = category.events.findIndex((e) => e.event_id === eventId);
+    if (index !== -1) {
+      category.events.splice(index, 1, updatedEvent);
+      this.store.editCollection(this.collection, categoryId, category);
+    }
+  }
 },
+
+
 
 
 };

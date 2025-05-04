@@ -22,5 +22,4 @@ router.get("/event/:id/deleteevent/:eventid", event.deleteEvent);
 router.get('/dashboard/deletecategory/:id', dashboard.deleteCategory);
 router.post('/event/:id/updateevent/:eventid', event.updateEvent);
 
-
 export default router;

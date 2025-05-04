@@ -62,10 +62,8 @@
       "events": [
         {
           "event_id": "06",
-          "name": "3x3x3 Blindfolded",
-          "cutoff": "10 mins (Cumulative)",
+          "cutoff": "10 mins helo",
           "avg_type": "Mean of 3",
-          "event_icon": "cubing-icon event-333bf",
           "wr_vid": "https://www.youtube.com/embed/TPylQiSbW98"
         },
         {

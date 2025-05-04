@@ -50,7 +50,7 @@ updateEvent(request, response) {
       wr_vid: request.body.wr_vid
     };
     cubeStore.editEvent(categoryId, eventId, updatedEvent);
-    response.redirect('/dashboard/' + categoryId);
+    response.redirect('/event/' + categoryId);
 }
 
 
