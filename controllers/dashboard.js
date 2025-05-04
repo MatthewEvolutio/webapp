@@ -31,6 +31,13 @@ const dashboard = {
     response.redirect('/dashboard');
 },
 
+  deleteCategory(request, response) {
+    const categoryId = request.params.id;
+    logger.debug(`Deleting Category ${categoryId}`);
+    cubeStore.removeCategory(categoryId);
+    response.redirect("/dashboard");
+},
+
 };
 
 export default dashboard;

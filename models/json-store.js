@@ -42,15 +42,29 @@ class JsonStore {
     await this.db.write();
   }
 
-  async removeItem(collection, id, arr, itemId) {
-    const data = this.db.data[collection].filter((c) => c.id === id);
-    const item = data[0][arr].filter((i) => i.id === itemId);
-    const index = data[0][arr].indexOf(item[0]);
-    if (index > -1) {
-      data[0][arr].splice(index, 1);
-    }
-    await this.db.write();
+async removeItem(collection, id, arr, itemId, idKey = "id", itemKey = "id") {
+  const data = this.db.data[collection].filter((c) => c[idKey] === id);
+
+  if (!data.length) {
+    console.error(`No item found in collection '${collection}' with ${idKey}=${id}`);
+    return;
   }
+
+  if (!data[0][arr]) {
+    console.error(`Property '${arr}' does not exist on item with ${idKey}=${id}`);
+    return;
+  }
+
+  const subArray = data[0][arr];
+  const index = subArray.findIndex((i) => i[itemKey] === itemId);
+
+  if (index > -1) {
+    subArray.splice(index, 1);
+    await this.db.write();
+  } else {
+    console.error(`No sub-item found with ${itemKey}=${itemId} in '${arr}'`);
+  }
+}
 
   async editCollection(collection, id, obj) {
     let index = this.db.data[collection].findIndex((c) => c.id === id);
