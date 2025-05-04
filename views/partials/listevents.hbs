@@ -12,10 +12,16 @@
       </thead>
       <tbody>
         {{#each events}}
-          <tr>
+        
+        <form 
+          class = "ui stacked segment form" 
+          action="/event/{{../category_id}}/updateevent/{{event_-id}}" 
+          method="POST"
+        >
+          <tr class="fields">
             <td><span class="{{event_icon}}"></span> {{uppercase name}}</td>
-            <td>{{cutoff}}</td>
-            <td>{{avg_type}}</td>
+            <td class="field"><span class="ui input"><input type="text" name="cutoff" autofocus required title="Enter Cutoff Time" placeholder="Cutoff" value="{{cutoff}}"></span></td>
+            <td class="field"><span class="ui input"><input type="text" name="avg_type" autofocus required title="Enter Average Type" placeholder="Average Type" value="{{avg_type}}"></span></td>
             <td>
               <iframe class="vid" src="{{wr_vid}}" allowfullscreen></iframe>
             </td>
