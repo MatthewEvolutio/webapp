@@ -45,7 +45,12 @@ removeEvent(id, eventId) {
 removeCategory(id) {
   const category = this.getEventCategory(id);
   this.store.removeCollection(this.collection, category);
-}
+},
+  
+  editEvent(id, eventId, updatedEvent) {
+    this.store.editItem(this.collection, id, eventId, this.array, updatedEvent);
+},
+
 
 };
 

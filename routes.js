@@ -20,6 +20,7 @@ router.post('/event/:id/addevent', event.addEvent);
 router.post('/dashboard/addcategory', dashboard.addCategory);
 router.get("/event/:id/deleteevent/:eventid", event.deleteEvent);
 router.get('/dashboard/deletecategory/:id', dashboard.deleteCategory);
-router.post('/playlist/:id/updateevent/:eventid', event.updateEvent);
+router.post('/event/:id/updateevent/:eventid', event.updateEvent);
+
 
 export default router;

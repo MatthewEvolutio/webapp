@@ -39,17 +39,18 @@ const event = {
     response.redirect(`/event/${categoryId}`);
 },
 
-updateSong(request, response) {
+updateEvent(request, response) {
     const categoryId = request.params.id;
     const eventId = request.params.eventid;
     logger.debug("updating song " + eventId);
     const updatedEvent = {
       event_id: eventId,
-      title: request.body.title,
-      artist: request.body.artist
+      cutoff: request.body.cutoff,
+      avg_type: request.body.avg_type,
+      wr_vid: request.body.wr_vid
     };
-    playlistStore.editSong(playlistId, songId, updatedSong);
-    response.redirect('/playlist/' + playlistId);
+    cubeStore.editEvent(categoryId, eventId, updatedEvent);
+    response.redirect('/dashboard/' + categoryId);
 }
 
 
