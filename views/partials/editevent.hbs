@@ -21,15 +21,16 @@
                 <input type="text" name="wr_vid" required placeholder="World Record" value="{{wr_vid}}">
               </span>
             </td>
+                <td class="center aligned">
+      <button type = "reset" class = "editSubmit" id="hideEdit"
+	          title="Exit without saving">
+        <i class="ui undo icon"></i>
+      </button>
+    </td>
             <td class="center aligned">
               <button type="submit" class="editSubmit">
                 <i class="ui pencil icon"></i>
               </button>
-            </td>
-            <td class="center aligned">
-              <a href="/event/{{../category_id}}/deleteevent/{{event_id}}" class="ui red button">
-                <i class="ui black trash icon"></i>
-              </a>
             </td>
           </form>
         </tr>
