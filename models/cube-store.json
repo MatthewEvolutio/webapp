@@ -4,6 +4,7 @@
       "category_id": "00",
       "category": "NxNs",
       "category_icon": "cubing-icon event-333",
+      "rating": 5,
       "events": [
         {
           "event_id": "00",
@@ -11,8 +12,7 @@
           "cutoff": "5 mins",
           "avg_type": "Average of 5",
           "event_icon": "cubing-icon event-222",
-          "wr_vid": "https://www.youtube.com/embed/iIFsuCq31PQ?si=OvWkVV940HKqm-Qr",
-          "rating": 0
+          "wr_vid": "https://www.youtube.com/embed/iIFsuCq31PQ?si=OvWkVV940HKqm-Qr"
         },
         {
           "event_id": "01",
@@ -60,6 +60,7 @@
       "category_id": "01",
       "category": "Blindfolded",
       "category_icon": "cubing-icon event-333bf",
+      "rating": 3,
       "events": [
         {
           "event_id": "06",
@@ -99,6 +100,7 @@
       "category_id": "02",
       "category": "Other 3x3 Events",
       "category_icon": "cubing-icon event-333oh",
+      "rating": 4,
       "events": [
         {
           "event_id": "10",
@@ -122,6 +124,7 @@
       "category_id": "03",
       "category": "Side Events",
       "category_icon": "cubing-icon event-pyram",
+      "rating": 1,
       "events": [
         {
           "event_id": "12",
@@ -166,23 +169,12 @@
       ]
     },
     {
-      "category_id": "b0274e12-baca-49a5-ab76-b90fa5c8cea6",
-      "category": "Test",
-      "category_icon": "cubing-icon unofficial-333mts",
-      "events": []
-    },
-    {
-      "category_id": "1aac78c7-a471-4c3b-89f7-7e1c184714bd",
-      "category": "rrrrr",
-      "category_icon": "cubing-icon unofficial-333mts",
-      "events": []
-    },
-    {
-      "category_id": "401c368b-3a16-40f0-8541-c9fe1d2d1f96",
-      "category": "date",
+      "category_id": "81655ec3-85ee-4fca-a223-83c2e206635b",
+      "category": "face turning octahedron ",
       "category_icon": "cubing-icon unofficial-333mts",
       "events": [],
-      "date": "2025-05-04T02:20:18.331Z"
+      "rating": "3",
+      "date": "2025-05-04T02:39:10.432Z"
     }
   ]
 }

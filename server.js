@@ -32,6 +32,13 @@ const handlebars = create({
       };
       return `${dateCreated.toLocaleDateString("en-IE", options)}`;
     },
+    highlightPopular: (rating) => {
+        let message = "";
+        if (rating >= 4){
+          message = "Popular with Cubers!";
+        }
+        return message;
+      }
   },
 });
 
