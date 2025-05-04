@@ -22,9 +22,9 @@ const cubeStore = {
     return this.store.findOneBy(this.collection, (event) => event.category_id === id);
   },
   
-  getEventCategory(id) {
+  getEventCategory(id, userid) {
     return this.store.findOneBy(this.collection,
-      (event) => event.category_id === id
+      (event) => event.category_id === id && event.userid === userid
     );
   },
 

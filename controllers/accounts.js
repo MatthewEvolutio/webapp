@@ -49,9 +49,9 @@ const accounts = {
   //authenticate function to check user credentials and either render the login page again or the start page.
   authenticate(request, response) {
     const user = userStore.getUserByEmail(request.body.email);
-    if (user) {
-      response.cookie('playlist', user.email);
-      logger.info('logging in' + user.email);
+
+    if (user && request.body.password === user.password) {
+      response.cookie('category', user.email);
       response.redirect('/start');
     } else {
       response.redirect('/login');
@@ -60,7 +60,7 @@ const accounts = {
   
  //utility function getCurrentUser to check who is currently logged in
   getCurrentUser (request) {
-    const userEmail = request.cookies.playlist;
+    const userEmail = request.cookies.category;
     return userStore.getUserByEmail(userEmail);
   }
 }

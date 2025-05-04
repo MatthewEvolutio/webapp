@@ -4,9 +4,9 @@ import logger from "../utils/logger.js";
 import cubeStore from "../models/cube-store.js";
 import accounts from './accounts.js';
 
-const getCategories = () => {
+const getCategories = (loggedInUser) => {
   const categories = [];
-  const cubes = cubeStore.getAllEvents();
+  const cubes = cubeStore.getAllEvents(loggedInUser.id);
   cubes.forEach(element => {
     if (!categories.includes(element.category)) {
       categories.push(element.category);
@@ -17,9 +17,10 @@ const getCategories = () => {
 
 const search = {
   createView(request, response) {
+     const loggedInUser = accounts.getCurrentUser(request);
     logger.info("Search page loading!");
-	
-    const viewData = {
+    if (loggedInUser) {
+     const viewData = {
       title: "Rubik's Cube App Search",
       categories: getCategories()
     };
@@ -27,9 +28,12 @@ const search = {
     logger.debug(viewData.categories);
     
     response.render('search', viewData);
+    }
+    else response.redirect('/');
   },
   
   findResult(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
     const category = request.body.category;
     logger.debug('Event category = ' + category);
 
@@ -37,7 +41,8 @@ const search = {
       title: 'Event',
       foundEvents: cubeStore.getEventCategory(category),
       categories: getCategories(),
-      categoryTitle: category
+      categoryTitle: category,
+      fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName
     };
     
     logger.debug(viewData.foundEvents);

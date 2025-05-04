@@ -6,14 +6,18 @@ import accounts from './accounts.js';
 
 const start = {
   createView(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
     logger.info("Start page loading!");
-    
+    if (loggedInUser) {
     const viewData = {
       title: "CA1 Starter App",
-      info: appStore.getAppInfo()
+      info: appStore.getAppInfo(),
+      fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
     };
     
-    response.render('start', viewData);   
+    response.render('start', viewData);  
+    }
+    else response.redirect('/');
   },
 };
 

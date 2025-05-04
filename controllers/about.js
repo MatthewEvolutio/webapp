@@ -7,6 +7,7 @@ import accounts from './accounts.js';
 
 const about = {
   createView(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
     const categories = cubeStore.getAllCategories();
 
     let numCategories = categories.length - 1;
@@ -33,9 +34,10 @@ const about = {
     logger.info(minEvents);
 
     logger.info("About page loading!");
-    
+    if(loggedInUser) {
     const viewData = {
-      title: "Playlist App About",  
+      title: "Playlist App About",
+      fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
       info: appStore.getAppInfo(),
       displayNumPlaylists: numCategories,
       displayNumEvents: numEvents,
@@ -45,6 +47,8 @@ const about = {
     };
     
     response.render('about', viewData);
+    }
+    else response.redirect("/");
   },
 };
 

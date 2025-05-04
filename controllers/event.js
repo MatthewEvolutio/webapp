@@ -8,11 +8,13 @@ import accounts from './accounts.js';
 const event = {
   createView(request, response) {
     const eventId = request.params.id;
+    const loggedInUser = accounts.getCurrentUser(request);
     
     const viewData = {
       title: "CA2 Starter App",
       wcaEvents: cubeStore.getAppInfo(),
-      singleEvent: cubeStore.getEvent(eventId)
+      singleEvent: cubeStore.getEvent(eventId),
+      fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
     };
     response.render('event', viewData);   
   },
