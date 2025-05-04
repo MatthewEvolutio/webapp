@@ -41,3 +41,9 @@ h1, h2, h3 {
 #logo {
  font-family: EightBitDragon;  
 }
+
+.editSubmit {
+  border:none;
+  background: none;
+}
+

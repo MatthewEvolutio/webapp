@@ -22,8 +22,14 @@
             <td><span class="{{event_icon}}"></span> {{uppercase name}}</td>
             <td class="field"><span class="ui input"><input type="text" name="cutoff" autofocus required title="Enter Cutoff Time" placeholder="Cutoff" value="{{cutoff}}"></span></td>
             <td class="field"><span class="ui input"><input type="text" name="avg_type" autofocus required title="Enter Average Type" placeholder="Average Type" value="{{avg_type}}"></span></td>
+            <td class="field"><span class="ui input"><input type="text" name="wr_vid" autofocus required title="Enter World Record Video" placeholder="World Record" value="{{wr_vid}}"></span></td>
             <td>
               <iframe class="vid" src="{{wr_vid}}" allowfullscreen></iframe>
+            </td>
+            <td class="center aligned">
+              <button type = "submit" class = "editSubmit">
+                <i class="ui pencil icon "></i>
+              </button>
             </td>
             <td class="center aligned">
               <a href="/event/{{../category_id}}/deleteevent/{{event_id}}" class="ui red button">
@@ -32,6 +38,7 @@
             </td>
 
           </tr>
+        </form>
         {{/each}}
       </tbody>
     </table>

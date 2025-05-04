@@ -39,6 +39,18 @@ const event = {
     response.redirect(`/event/${categoryId}`);
 },
 
+updateSong(request, response) {
+    const categoryId = request.params.id;
+    const eventId = request.params.eventid;
+    logger.debug("updating song " + eventId);
+    const updatedEvent = {
+      event_id: eventId,
+      title: request.body.title,
+      artist: request.body.artist
+    };
+    playlistStore.editSong(playlistId, songId, updatedSong);
+    response.redirect('/playlist/' + playlistId);
+}
 
 
 };
