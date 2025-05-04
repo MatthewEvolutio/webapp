@@ -28,6 +28,9 @@ const cubeStore = {
     );
   },
 
+  getAllCategories() {
+    return this.store.findAll(this.array);
+  },
   
   addEvent(id, event) {
     this.store.addItem(this.collection, id, this.array, event);
