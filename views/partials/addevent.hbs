@@ -1,4 +1,4 @@
-<form class="ui stacked segment form" action="/event/{{id}}/addevent" method="POST">
+<form class="ui stacked segment form" action="/event/{{singleEvent.category_id}}/addevent" method="POST">
   <div class="four fields">
     <div class="field">
       <label>Event Name</label>
@@ -17,7 +17,7 @@
     </div>
         <div class="field">
       <label>World Record Video</label>
-      <input type="text" name="wr_video" required title = "Please include a valid World Record Embedded Video"
+      <input type="text" name="wr_vid" required title = "Please include a valid World Record Embedded Video"
 	  placeholder="https://www.youtube.com/embed/3BKV7mYhgpI?si=SDIrGtR0BKqTXFpi"  >
     </div>
   </div>

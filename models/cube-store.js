@@ -24,12 +24,12 @@ const cubeStore = {
   
   getEventCategory(category) {
    return this.store.findBy(this.collection,
-      (playlist => playlist.category.toLowerCase() === category.toLowerCase())
+      (event => event.category.toLowerCase() === category.toLowerCase())
    );
 },
   
-  addCube(id, cube) {
-    this.store.addItem(this.collection, id, this.array, cube);
+  addEvent(id, event) {
+    this.store.addItem(this.collection, id, this.array, event);
 },
 
 
