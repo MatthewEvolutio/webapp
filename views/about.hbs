@@ -1,9 +1,73 @@
 {{> menu id="about"}}
+    <link rel="stylesheet" href="https://cdn.cubing.net/v0/css/@cubing/icons/css">
 
 <section class="ui left aligned middle aligned segment">
   
-    <h2>App About Page</h2>
+<section class="ui center aligned middle aligned segment">
+  
+  <h2>About the Playlist App</h2>
+  <p>
+    The playlist app now contains: 
+  </p>
+  
+  <div class="ui center aligned grid">
+    <div class="sixteen wide column">
+        <div class="ui centered two statistics">
+          <div class="statistic">
+            <h3>Number of Categories</h3>
+            <div class="value">
+              <i class="red microphone icon"></i> 
+            </div>
+            <div class="label">
+              {{displayNumPlaylists}} playlists
+            </div>
+          </div>
 
+          <div class="statistic">
+            <h3>Number of songs</h3>
+            <div class="value">
+              <i class="orange music icon"></i> 
+            </div>
+            <div class="label">
+              {{displayNumSongs}} songs
+            </div>
+          </div>    
+
+          <div class="statistic">
+            <h3>Average number of songs per playlist</h3>
+            <div class="value">
+              <i class="yellow play icon"></i> 
+            </div>
+            <div class="label">
+              {{displayavgSongs}} songs
+            </div>
+          </div>
+
+      
+          <div class="statistic">
+            <h3>Max number of songs</h3>
+            <div class="value">
+              <i class="green headphones icon"></i> 
+            </div>
+            <div class="label">
+              {{displaymaxSongs}} songs
+            </div>
+          </div>
+
+    
+          <div class="statistic">
+            <h3>Min number of songs</h3>
+            <div class="value">
+              <i class="blue file audio icon"></i> 
+            </div>
+            <div class="label">
+              {{displayminSongs}} songs
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
     <section class="ui left aligned middle aligned segment">
       <h3>Contact details:</h3>
       <p>

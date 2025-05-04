@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="public/style.css">
-<tr class="fields hide" id="edit">
+<tr class="fields hide" id="edit{{@index}}">
           <form 
             class="ui stacked segment form" 
             action="/event/{{../category_id}}/updateevent/{{event_id}}" 
@@ -22,13 +21,13 @@
               </span>
             </td>
                 <td class="center aligned">
-      <button type = "reset" class = "editSubmit" id="hideEdit"
+      <button type = "reset" class = "editSubmit" id="hideEdit{{@index}}"
 	          title="Exit without saving">
         <i class="ui undo icon"></i>
       </button>
     </td>
             <td class="center aligned">
-              <button type="submit" class="editSubmit">
+              <button type="submit" class="editSubmit" id="showEdit{{@index}}">
                 <i class="ui pencil icon"></i>
               </button>
             </td>
