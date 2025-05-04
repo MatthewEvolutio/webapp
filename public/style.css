@@ -34,19 +34,19 @@ body {
   height: 100%;
 }
 
-h1, h2, h3 {
- font-family: EightBitDragon;
-}
-
-#logo {
- font-family: EightBitDragon;  
-}
-
 .editSubmit {
   border:none;
   background: none;
 }
 
-.hide{
+.hide {
   display: none;
+}
+
+h1, h2, h3 {
+ font-family: "EightBitDragon";
+}
+
+#logo {
+ font-family: "EightBitDragon";  
 }
