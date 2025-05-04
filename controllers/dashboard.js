@@ -33,7 +33,7 @@ const dashboard = {
 
   deleteCategory(request, response) {
     const categoryId = request.params.id;
-    console.log(`Deleting Category with ID: ${categoryId}`);  // Debugging log
+    console.log(`Deleting Category with ID: ${categoryId}`);  
     logger.debug(`Deleting Category ${categoryId}`);
     cubeStore.removeCategory(categoryId);
     response.redirect("/dashboard");
