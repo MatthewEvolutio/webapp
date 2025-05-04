@@ -6,12 +6,21 @@
 
     {{#each wcaEvents}}
     <section class="ui middle aligned segment">
-      <h3 class="ui header">{{category}}</h3>
+      <h3 class="ui header">{{uppercase category}}</h3>
       <a href="/event/{{category_id}}">
         <span class="{{category_icon}}"></span>
       </a>
       {{#if events}}
         <p class="ui middle aligned segment">Total events: {{events.length}}</p>
+      
+      {{else}}
+        Empty Category!
+      {{/if}}
+      
+      {{#if date}}
+        <br>
+        <i class="calendar alternate outline icon"></i>
+        Created on <i>{{formatDate date}}</i>
       {{/if}}
   </section>
   {{/each}}

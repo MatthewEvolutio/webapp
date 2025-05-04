@@ -24,6 +24,7 @@ const dashboard = {
       category: request.body.category,
 	    category_icon: 'cubing-icon unofficial-333mts',
       events: [],
+      rating: 0,
       date: timestamp
     };
     cubeStore.addCategory(newCategory);

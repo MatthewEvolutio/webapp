@@ -11,7 +11,8 @@
           "cutoff": "5 mins",
           "avg_type": "Average of 5",
           "event_icon": "cubing-icon event-222",
-          "wr_vid": "https://www.youtube.com/embed/iIFsuCq31PQ?si=OvWkVV940HKqm-Qr"
+          "wr_vid": "https://www.youtube.com/embed/iIFsuCq31PQ?si=OvWkVV940HKqm-Qr",
+          "rating": 0
         },
         {
           "event_id": "01",
@@ -175,6 +176,13 @@
       "category": "rrrrr",
       "category_icon": "cubing-icon unofficial-333mts",
       "events": []
+    },
+    {
+      "category_id": "401c368b-3a16-40f0-8541-c9fe1d2d1f96",
+      "category": "date",
+      "category_icon": "cubing-icon unofficial-333mts",
+      "events": [],
+      "date": "2025-05-04T02:20:18.331Z"
     }
   ]
 }
