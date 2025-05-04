@@ -17,6 +17,7 @@ router.get('/event/:id', event.createView);
 router.get('/search', search.createView);
 router.post('/searchCategory', search.findResult);
 router.post('/event/:id/addevent', event.addEvent);
+router.post('/dashboard/addcategory', dashboard.addCategory);
 
 
 export default router;

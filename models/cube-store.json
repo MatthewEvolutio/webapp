@@ -163,6 +163,12 @@
           "wr_vid": "https://www.youtube.com/embed/91b9RpUeZ20?si=8jbXP-xkObiAwyqJ"
         }
       ]
+    },
+    {
+      "category_id": "b0274e12-baca-49a5-ab76-b90fa5c8cea6",
+      "category": "Test",
+      "category_icon": "cubing-icon unofficial-333mts",
+      "events": []
     }
   ]
 }

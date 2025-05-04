@@ -32,6 +32,10 @@ const cubeStore = {
     this.store.addItem(this.collection, id, this.array, event);
 },
 
+  addCategory(category) {
+    this.store.addCollection(this.collection, category);
+},
+
 
 
 };

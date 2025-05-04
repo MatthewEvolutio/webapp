@@ -16,14 +16,14 @@ const dashboard = {
     response.render('dashboard', viewData);   
   },
   
-  addPlaylist(request, response) {
-    const newPlayList = {
-      id: uuidv4(),
-      title: request.body.title,
-	  category: request.body.category,
-      songs: [],
+  addCategory(request, response) {
+    const newCategory = {
+      category_id: uuidv4(),
+      category: request.body.category,
+	    category_icon: 'cubing-icon unofficial-333mts',
+      events: [],
     };
-    playlistStore.addPlaylist(newPlayList);
+    cubeStore.addCategory(newCategory);
     response.redirect('/dashboard');
 },
 
