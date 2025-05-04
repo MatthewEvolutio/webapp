@@ -17,11 +17,14 @@ const dashboard = {
   },
   
   addCategory(request, response) {
+    const timestamp = new Date();
+    
     const newCategory = {
       category_id: uuidv4(),
       category: request.body.category,
 	    category_icon: 'cubing-icon unofficial-333mts',
       events: [],
+      date: timestamp
     };
     cubeStore.addCategory(newCategory);
     response.redirect('/dashboard');

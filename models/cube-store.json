@@ -169,6 +169,12 @@
       "category": "Test",
       "category_icon": "cubing-icon unofficial-333mts",
       "events": []
+    },
+    {
+      "category_id": "1aac78c7-a471-4c3b-89f7-7e1c184714bd",
+      "category": "rrrrr",
+      "category_icon": "cubing-icon unofficial-333mts",
+      "events": []
     }
   ]
 }
