@@ -20,6 +20,13 @@
       "email": "matthewhoran27@gmail.com",
       "password": "secret",
       "id": "b9e4b186-4a4e-47ee-9eb8-370a69a8e5bc"
+    },
+    {
+      "firstName": "john",
+      "lastName": "jon",
+      "email": "john@gmail.com",
+      "password": "secret",
+      "id": "9b53db2f-15d1-4058-a32e-89933ddf56b0"
     }
   ]
 }

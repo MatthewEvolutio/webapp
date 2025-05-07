@@ -172,6 +172,15 @@
       "events": [],
       "rating": "3",
       "date": "2025-05-07T06:00:17.713Z"
+    },
+    {
+      "userid": "9b53db2f-15d1-4058-a32e-89933ddf56b0",
+      "category_id": "5ad7585c-7dc3-49ae-8551-107c286f5147",
+      "category": "Test 2",
+      "category_icon": "cubing-icon unofficial-333mts",
+      "events": [],
+      "rating": "2",
+      "date": "2025-05-07T09:54:04.166Z"
     }
   ]
 }
