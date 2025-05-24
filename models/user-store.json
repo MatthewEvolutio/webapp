@@ -27,6 +27,13 @@
       "email": "john@gmail.com",
       "password": "secret",
       "id": "9b53db2f-15d1-4058-a32e-89933ddf56b0"
+    },
+    {
+      "firstName": "Rosanne",
+      "lastName": "Birney",
+      "email": "rosanne@gmail.com",
+      "password": "secret",
+      "id": "2e8c149b-2b25-4eba-bf9f-88031cf088af"
     }
   ]
 }
