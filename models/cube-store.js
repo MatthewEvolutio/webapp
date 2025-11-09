@@ -2,10 +2,11 @@
 
 import logger from '../utils/logger.js';
 import JsonStore from './json-store.js';
+import { getModelPath } from '../utils/paths.js';
 
 const cubeStore = {
 
-  store: new JsonStore('./models/cube-store.json', { wca_events: [] }),
+  store: new JsonStore(getModelPath('cube-store.json'), { wca_events: [] }),
   collection: 'wca_events',
   array: 'events',
 

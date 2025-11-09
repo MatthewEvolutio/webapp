@@ -46,12 +46,15 @@ const handlebars = create({
 
 app.engine(".hbs", handlebars.engine);
 app.set("view engine", ".hbs");
+app.set("views", "./views");
 
 app.use("/", routes);
 
-// For local development
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(port, () => logger.info(`Your app is listening on port ${port}`));
+const PORT = process.env.PORT || 3000;
+
+// Only listen when not in serverless environment
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => logger.info(`Your app is listening on port ${PORT}`));
 }
 
 // Export for Vercel
