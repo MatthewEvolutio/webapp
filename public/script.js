@@ -11,7 +11,7 @@ document.addEventListener('click', (e) => {
     e.preventDefault();
     // Find the section containing the category
     const categorySection = deleteLink.closest('section.ui.middle.aligned.segment');
-    if (categorySection && confirm('Delete this category? (Changes not saved to server)')) {
+    if (categorySection) {
       categorySection.style.transition = 'opacity 0.3s';
       categorySection.style.opacity = '0';
       setTimeout(() => categorySection.remove(), 300);
@@ -30,7 +30,7 @@ document.addEventListener('click', (e) => {
     const index = eventRow.id.replace('event', '');
     const editRow = document.querySelector(`#edit${index}`);
 
-    if (eventRow && confirm('Delete this event? (Changes not saved to server)')) {
+    if (eventRow) {
       eventRow.style.transition = 'opacity 0.3s';
       eventRow.style.opacity = '0';
       if (editRow) {
@@ -71,7 +71,7 @@ if (addCategoryForm) {
         <a href="/event/new-${Date.now()}">
           <span class="cubing-icon unofficial-333mts"></span>
         </a>
-        <a href="/dashboard/deletecategory/new-${Date.now()}" onclick="event.preventDefault(); if(confirm('Delete?')) this.closest('section').remove();">
+        <a href="/dashboard/deletecategory/new-${Date.now()}" onclick="event.preventDefault(); this.closest('section').remove();">
           <i class="ui trash black icon"></i>
         </a>
       `;
@@ -113,7 +113,7 @@ if (addEventForm) {
           </button>
         </td>
         <td class="center aligned">
-          <a href="#" title="Delete Event" onclick="event.preventDefault(); if(confirm('Delete?')) this.closest('tr').remove();">
+          <a href="#" title="Delete Event" onclick="event.preventDefault(); this.closest('tr').remove();">
             <i class="ui black trash icon"></i>
           </a>
         </td>
