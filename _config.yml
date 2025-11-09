@@ -1,17 +1,31 @@
 # Jekyll Configuration for Node.js Project
+
+# Exclude Node.js files from processing
 exclude:
+  - node_modules/
   - node_modules
+  - .node-gyp/
   - .node-gyp
   - package.json
   - package-lock.json
   - pnpm-debug.log
   - server.js
   - routes.js
+  - controllers/
   - controllers
+  - models/
   - models
+  - utils/
   - utils
+  - .git/
   - .git
+  - .config/
   - .config
+  - .data/
   - .data
   - .glitch-assets
   - .glitchdotcom.json
+
+# Keep files from being processed
+keep_files:
+  - .git
