@@ -1,0 +1,17 @@
+# Jekyll Configuration for Node.js Project
+exclude:
+  - node_modules
+  - .node-gyp
+  - package.json
+  - package-lock.json
+  - pnpm-debug.log
+  - server.js
+  - routes.js
+  - controllers
+  - models
+  - utils
+  - .git
+  - .config
+  - .data
+  - .glitch-assets
+  - .glitchdotcom.json
