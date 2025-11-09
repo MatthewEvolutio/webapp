@@ -6,16 +6,24 @@ import routes from './routes.js';
 import { create } from 'express-handlebars';
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 const port = 3000;
 
-app.use(express.static("public"));
+app.use(express.static(join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: false, }));
 app.use(cookieParser());
 
 const handlebars = create({
   extname: '.hbs',
+  layoutsDir: join(__dirname, 'views/layouts'),
+  partialsDir: join(__dirname, 'views/partials'),
+  defaultLayout: 'main',
   helpers: {
     uppercase: (inputString) => {
       if (typeof inputString === 'string') {
@@ -46,7 +54,7 @@ const handlebars = create({
 
 app.engine(".hbs", handlebars.engine);
 app.set("view engine", ".hbs");
-app.set("views", "./views");
+app.set("views", join(__dirname, "views"));
 
 app.use("/", routes);
 
