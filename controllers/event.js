@@ -3,57 +3,36 @@
 import logger from "../utils/logger.js";
 import cubeStore from "../models/cube-store.js";
 import { v4 as uuidv4 } from 'uuid';
-import accounts from './accounts.js';
 
 const event = {
   createView(request, response) {
     const eventId = request.params.id;
-    const loggedInUser = accounts.getCurrentUser(request);
-    
+
     const viewData = {
       title: "CA2 Starter App",
       wcaEvents: cubeStore.getAppInfo(),
       singleEvent: cubeStore.getEvent(eventId),
-      fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
     };
-    response.render('event', viewData);   
+    response.render('event', viewData);
   },
-  
+
   addEvent(request, response) {
     const categoryId = request.params.id;
-    const category = cubeStore.getEventCategory(categoryId);
-    const newEvent = {
-      event_id: uuidv4(),
-      name: request.body.name,
-      cutoff: request.body.cutoff,
-      avg_type: request.body.avg_type,
-      wr_vid: request.body.wr_vid,
-    };
-
-    cubeStore.addEvent(categoryId, newEvent);
+    // Client-side only - don't save to model
     response.redirect(`/event/${categoryId}`);
   },
-  
+
   deleteEvent(request, response) {
     const categoryId = request.params.id;
-    const eventId = request.params.eventid;
-    cubeStore.removeEvent(categoryId, eventId);
+    // Client-side only - don't save to model
     response.redirect(`/event/${categoryId}`);
-},
+  },
 
-updateEvent(request, response) {
+  updateEvent(request, response) {
     const categoryId = request.params.id;
-    const eventId = request.params.eventid;
-    const updatedEvent = {
-      event_id: eventId,
-      cutoff: request.body.cutoff,
-      avg_type: request.body.avg_type,
-      wr_vid: request.body.wr_vid
-    };
-    cubeStore.editEvent(categoryId, eventId, updatedEvent);
+    // Client-side only - don't save to model
     response.redirect(`/event/${categoryId}`);
-}
-
+  }
 
 };
 

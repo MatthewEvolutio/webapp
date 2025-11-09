@@ -3,11 +3,9 @@
 import logger from "../utils/logger.js";
 import appStore from "../models/app-store.js";
 import cubeStore from "../models/cube-store.js";
-import accounts from './accounts.js';
 
 const about = {
   createView(request, response) {
-    const loggedInUser = accounts.getCurrentUser(request);
     const categories = cubeStore.getAllCategories();
 
     let numCategories = categories.length - 1;
@@ -21,23 +19,21 @@ const about = {
         if (maxEvents < item.events.length) {
           maxEvents = item.events.length;
         }
-      
+
         if (minEvents > item.events.length) {
           minEvents = item.events.length;
         }
     }
-    
+
     avgEvents = numEvents / numCategories;
-    
+
     logger.info(avgEvents);
     logger.info(maxEvents);
     logger.info(minEvents);
 
     logger.info("About page loading!");
-    if(loggedInUser) {
     const viewData = {
       title: "Playlist App About",
-      fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
       info: appStore.getAppInfo(),
       displayNumPlaylists: numCategories,
       displayNumEvents: numEvents,
@@ -45,10 +41,8 @@ const about = {
       displayMaxEvents: maxEvents,
       displayMinEvents: minEvents
     };
-    
+
     response.render('about', viewData);
-    }
-    else response.redirect("/");
   },
 };
 

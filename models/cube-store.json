@@ -163,42 +163,6 @@
           "wr_vid": "https://www.youtube.com/embed/91b9RpUeZ20?si=8jbXP-xkObiAwyqJ"
         }
       ]
-    },
-    {
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "category_id": "bb526090-a246-4bf4-bd1b-d4ec5f5f447a",
-      "category": "test",
-      "category_icon": "cubing-icon unofficial-333mts",
-      "events": [],
-      "rating": "3",
-      "date": "2025-05-07T06:00:17.713Z"
-    },
-    {
-      "userid": "9b53db2f-15d1-4058-a32e-89933ddf56b0",
-      "category_id": "5ad7585c-7dc3-49ae-8551-107c286f5147",
-      "category": "Test 2",
-      "category_icon": "cubing-icon unofficial-333mts",
-      "events": [],
-      "rating": "2",
-      "date": "2025-05-07T09:54:04.166Z"
-    },
-    {
-      "userid": "2e8c149b-2b25-4eba-bf9f-88031cf088af",
-      "category_id": "24567323-4594-440e-b7b1-542251bcec8b",
-      "category": "test",
-      "category_icon": "cubing-icon unofficial-333mts",
-      "events": [],
-      "rating": "4",
-      "date": "2025-05-24T16:27:10.309Z"
-    },
-    {
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "category_id": "22b16262-c997-487f-b755-9ae71c1468dc",
-      "category": "test",
-      "category_icon": "cubing-icon unofficial-333mts",
-      "events": [],
-      "rating": "3",
-      "date": "2025-05-24T16:28:37.756Z"
     }
   ]
 }
