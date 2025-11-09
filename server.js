@@ -49,4 +49,10 @@ app.set("view engine", ".hbs");
 
 app.use("/", routes);
 
-app.listen(port, () => logger.info(`Your app is listening on port ${port}`));
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(port, () => logger.info(`Your app is listening on port ${port}`));
+}
+
+// Export for Vercel
+export default app;
