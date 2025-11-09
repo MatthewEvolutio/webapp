@@ -1,0 +1,17 @@
+# Node.js
+node_modules/
+.node-gyp
+npm-debug.log
+pnpm-debug.log
+
+# Environment
+.env
+.env.local
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
