@@ -59,41 +59,38 @@ h1, h2, h3 {
   text-transform:capitalize;
 }
 
-/* Themed scrollbars (similar to PDF preview) */
 html {
   scrollbar-width: thin;
-  /* Firefox */
   scrollbar-color: var(--accent) var(--background);
 }
 
-:root {
-  --background: #0c1a20;
-  /* match portfolio values or expose them */
-  --accent: #2aa198;
-  --accent-strong: #1f7e74;
-  --accent-on: #002b36;
-  --muted: #6c8891;
-}
-
-body::-webkit-scrollbar,
 html::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 
-body::-webkit-scrollbar-track,
 html::-webkit-scrollbar-track {
   background: var(--background);
 }
 
-body::-webkit-scrollbar-thumb,
 html::-webkit-scrollbar-thumb {
   background: var(--accent);
-  border-radius: 999px;
+  border-radius: 9999px;
   border: 2px solid var(--background);
 }
 
-body::-webkit-scrollbar-thumb:hover,
 html::-webkit-scrollbar-thumb:hover {
   background: var(--accent-strong);
+}
+
+/* Optional: Fomantic primary override using CSS vars */
+.ui.primary.button,
+.ui.primary.label,
+.ui.primary.segment {
+  background: var(--accent) !important;
+  color: var(--accent-on) !important;
+}
+
+.ui.primary.button:hover {
+  background: var(--accent-strong) !important;
 }

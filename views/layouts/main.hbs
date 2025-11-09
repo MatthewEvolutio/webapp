@@ -12,8 +12,48 @@
   <body>
     <section class="ui container">
       {{{body}}}
+      <script>
+        (function () {
+          function applyTheme(data) {
+            if (!data) return;
+            try {
+              // 1) Set theme class on body
+              var classes = document.body.className.split(/\s+/).filter(function (c) {
+                return !/^theme-/.test(c);
+              });
+              if (data.themeClass) classes.push(data.themeClass);
+              document.body.className = classes.join(' ').trim();
+
+              // 2) Apply CSS variables to :root
+              var root = document.documentElement;
+              var vars = data.vars || {};
+              Object.keys(vars).forEach(function (k) {
+                root.style.setProperty(k, vars[k]);
+              });
+            } catch (e) {
+              console.error('Theme application error:', e);
+            }
+          }
+
+          window.addEventListener('message', function (e) {
+            if (e && e.data && e.data.type === 'set-theme') {
+              applyTheme(e.data);
+            }
+          });
+
+          // Optional: request initial theme if parent exists
+          try {
+            if (parent && parent !== window) {
+              parent.postMessage({ type: 'request-theme' }, '*');
+            }
+          } catch (e) {
+            // Cross-origin restriction is fine
+          }
+        })();
+      </script>
     </section>
     <!-- import the jQuery file -->
+    
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
