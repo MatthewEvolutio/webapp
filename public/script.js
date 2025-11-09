@@ -2,16 +2,83 @@ $('.ui.rating')
   .rating()
 ;
 
-// Client-side only operations - changes persist in browser until page refresh/navigation
+// Session storage helpers for temporary data persistence
+const SessionData = {
+  init() {
+    if (!sessionStorage.getItem('sessionId')) {
+      sessionStorage.setItem('sessionId', Date.now().toString());
+    }
+  },
+
+  getDeletedCategories() {
+    return JSON.parse(sessionStorage.getItem('deletedCategories') || '[]');
+  },
+
+  addDeletedCategory(id) {
+    const deleted = this.getDeletedCategories();
+    deleted.push(id);
+    sessionStorage.setItem('deletedCategories', JSON.stringify(deleted));
+  },
+
+  getAddedCategories() {
+    return JSON.parse(sessionStorage.getItem('addedCategories') || '[]');
+  },
+
+  addCategory(category) {
+    const added = this.getAddedCategories();
+    added.push(category);
+    sessionStorage.setItem('addedCategories', JSON.stringify(added));
+  },
+
+  getDeletedEvents() {
+    return JSON.parse(sessionStorage.getItem('deletedEvents') || '{}');
+  },
+
+  addDeletedEvent(categoryId, eventId) {
+    const deleted = this.getDeletedEvents();
+    if (!deleted[categoryId]) deleted[categoryId] = [];
+    deleted[categoryId].push(eventId);
+    sessionStorage.setItem('deletedEvents', JSON.stringify(deleted));
+  },
+
+  getAddedEvents() {
+    return JSON.parse(sessionStorage.getItem('addedEvents') || '{}');
+  },
+
+  addEvent(categoryId, event) {
+    const added = this.getAddedEvents();
+    if (!added[categoryId]) added[categoryId] = [];
+    added[categoryId].push(event);
+    sessionStorage.setItem('addedEvents', JSON.stringify(added));
+  },
+
+  getEditedEvents() {
+    return JSON.parse(sessionStorage.getItem('editedEvents') || '{}');
+  },
+
+  editEvent(categoryId, eventId, updates) {
+    const edited = this.getEditedEvents();
+    const key = `${categoryId}_${eventId}`;
+    edited[key] = updates;
+    sessionStorage.setItem('editedEvents', JSON.stringify(edited));
+  }
+};
+
+// Initialize session data
+SessionData.init();
+
+// Client-side only operations - changes persist in browser session
 
 // Handle delete category - visually remove from page
 document.addEventListener('click', (e) => {
   const deleteLink = e.target.closest('a[href*="/deletecategory/"]');
   if (deleteLink) {
     e.preventDefault();
+    const categoryId = deleteLink.href.split('/deletecategory/')[1];
     // Find the section containing the category
     const categorySection = deleteLink.closest('section.ui.middle.aligned.segment');
     if (categorySection) {
+      SessionData.addDeletedCategory(categoryId);
       categorySection.style.transition = 'opacity 0.3s';
       categorySection.style.opacity = '0';
       setTimeout(() => categorySection.remove(), 300);
@@ -24,6 +91,11 @@ document.addEventListener('click', (e) => {
   const deleteLink = e.target.closest('a[href*="/deleteevent/"]');
   if (deleteLink) {
     e.preventDefault();
+    const href = deleteLink.href;
+    const parts = href.split('/');
+    const categoryId = parts[parts.indexOf('event') + 1];
+    const eventId = parts[parts.indexOf('deleteevent') + 1];
+
     // Find the table row containing the event
     const eventRow = deleteLink.closest('tr');
     // Also find and remove the corresponding edit row
@@ -31,6 +103,7 @@ document.addEventListener('click', (e) => {
     const editRow = document.querySelector(`#edit${index}`);
 
     if (eventRow) {
+      SessionData.addDeletedEvent(categoryId, eventId);
       eventRow.style.transition = 'opacity 0.3s';
       eventRow.style.opacity = '0';
       if (editRow) {
@@ -54,6 +127,15 @@ if (addCategoryForm) {
     const category = formData.get('category');
     const rating = formData.get('rating') || 0;
 
+    const newCategoryId = 'temp-' + Date.now();
+    const categoryData = {
+      category_id: newCategoryId,
+      category: category,
+      rating: rating
+    };
+
+    SessionData.addCategory(categoryData);
+
     // Find the categories container
     const container = document.querySelector('section.ui.center.aligned.middle.aligned.segment');
     if (container && category) {
@@ -68,10 +150,10 @@ if (addCategoryForm) {
           <span style="color: grey; font-size: 90%; font-style: italic">Rating: ${rating}/5</span>
         </p>
         ` : ''}
-        <a href="/event/new-${Date.now()}">
+        <a href="/event/${newCategoryId}">
           <span class="cubing-icon unofficial-333mts"></span>
         </a>
-        <a href="/dashboard/deletecategory/new-${Date.now()}" onclick="event.preventDefault(); this.closest('section').remove();">
+        <a href="/dashboard/deletecategory/${newCategoryId}" onclick="event.preventDefault(); this.closest('section').remove();">
           <i class="ui trash black icon"></i>
         </a>
       `;
@@ -94,6 +176,20 @@ if (addEventForm) {
     const cutoff = formData.get('cutoff');
     const avgType = formData.get('avg_type');
     const wrVid = formData.get('wr_vid');
+
+    // Get category ID from URL
+    const categoryId = window.location.pathname.split('/event/')[1];
+    const newEventId = 'temp-event-' + Date.now();
+
+    const eventData = {
+      event_id: newEventId,
+      name: name,
+      cutoff: cutoff,
+      avg_type: avgType,
+      wr_vid: wrVid
+    };
+
+    SessionData.addEvent(categoryId, eventData);
 
     // Find the events table tbody
     const tbody = document.querySelector('table.ui.fixed.striped.table tbody');
@@ -140,6 +236,13 @@ document.addEventListener('submit', (e) => {
       const cutoff = formData.get('cutoff');
       const avgType = formData.get('avg_type');
       const wrVid = formData.get('wr_vid');
+
+      // Get category and event ID from URL
+      const urlParts = form.action.split('/');
+      const categoryId = urlParts[urlParts.indexOf('event') + 1];
+      const eventId = urlParts[urlParts.indexOf('updateevent') + 1];
+
+      SessionData.editEvent(categoryId, eventId, { cutoff, avg_type: avgType, wr_vid: wrVid });
 
       // Update the event row cells
       const cells = eventRow.querySelectorAll('td');
