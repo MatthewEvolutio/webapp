@@ -2,7 +2,7 @@
 
 import express from 'express';
 import logger from "./utils/logger.js";
-import routes from './routes.js'; 
+import routes from './routes.js';
 import { create } from 'express-handlebars';
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
@@ -15,13 +15,13 @@ app.use(bodyParser.urlencoded({ extended: false, }));
 app.use(cookieParser());
 
 const handlebars = create({
-  extname: '.hbs', 
+  extname: '.hbs',
   helpers: {
     uppercase: (inputString) => {
       if (typeof inputString === 'string') {
         return inputString.toUpperCase();
       } else {
-        return ''; 
+        return '';
       }
     },
     formatDate: (date) => {
